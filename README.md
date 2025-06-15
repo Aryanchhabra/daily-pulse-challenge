@@ -107,9 +107,12 @@ Sort by `date_utc, region_code, proj_type_code`.
 Used TextBlob library for sentiment polarity scoring (-1 to +1), with scores rounded to nearest 0.05. Provides simple, reliable sentiment analysis without requiring external APIs or complex ML models.
 
 **Privacy Protection**: Laplace noise is added to sensitive metrics to ensure differential privacy.
+
 **Percentage Clamping**: All percentage values are clamped between 0.0 and 1.0 to ensure valid data.
+
 **Sentiment Rounding**: Sentiment scores are rounded to the nearest 0.05 within the range of -1.0 to 1.0.
+
 **Minimum Bucket Size**: A minimum of 5 records per bucket is enforced to protect individual role privacy.
 
-```
+
 
