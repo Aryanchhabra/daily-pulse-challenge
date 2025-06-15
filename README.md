@@ -1,52 +1,3 @@
-# Daily Pulse Challenge
-
-## Overview
-This project generates an aggregated summary of casting breakdowns to help industry analysts track key metrics over time. The output is privacy-aware and includes trend analysis.
-
-## Features
-- **Data Aggregation**: Aggregates data by date, region, and project type.
-- **Privacy Protection**: Implements Laplace noise and minimum bucket size to protect individual role privacy.
-- **Trend Analysis**: Includes 7-day rolling averages and day-over-day changes.
-- **Core Metrics**: Tracks role count, lead share, union share, median rate, sentiment, and AI theme share.
-
-## Output Format
-The output CSV file (`daily_pulse.csv`) includes the following columns:
-- `date_utc`: Date of the data
-- `region_code`: Region code (e.g., NA for North America)
-- `proj_type_code`: Project type code (e.g., C for Commercial)
-- `role_count_day`: Number of roles posted that day
-- `lead_share_pct_day`: Percentage of lead roles
-- `union_share_pct_day`: Percentage of union roles
-- `median_rate_day_usd`: Median rate for roles that day (in USD)
-- `sentiment_avg_day`: Average sentiment score of role descriptions
-- `theme_ai_share_pct_day`: Percentage of roles with AI-related themes
-
-## Usage
-Run the script with the following command:
-```bash
-python build_pulse.py --input <input_csv_file> --output <output_csv_file>
-```
-
-## Example
-```bash
-python build_pulse.py --input breakdowns_sample.csv --output daily_pulse.csv
-```
-
-## Requirements
-- Python 3.6+
-- pandas
-- numpy
-- textblob
-
-## Installation
-Install the required packages using pip:
-```bash
-pip install pandas numpy textblob
-```
-
-## License
-This project is licensed under the MIT License.
-
 # 🎬  “Mini Casting Pulse” Coding Exercise
 
 Actors find work through an online casting platform—basically a job board dedicated to film, TV, commercials, and voice work. When an actor refreshes their casting feed, a live stream of brand-new breakdowns appears. A breakdown is a structured role notice: it lists the project type (film, series, commercial, etc.), shoot location, pay rate, union status, and the age/gender/ethnicity the casting director is looking for, along with a short role description.
@@ -162,4 +113,3 @@ Used TextBlob library for sentiment polarity scoring (-1 to +1), with scores rou
 
 ```
 
----
